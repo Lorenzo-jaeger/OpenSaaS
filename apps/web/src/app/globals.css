@@ -1,0 +1,10 @@
+@import "@opensaas/ui/src/styles/globals.css";
+
+@theme {
+    --color-glass-surface: rgba(255, 255, 255, 0.03);
+}
+
+body {
+    background: radial-gradient(circle at top left, #1a1a1a, #0a0a0a);
+    min-height: 100vh;
+}

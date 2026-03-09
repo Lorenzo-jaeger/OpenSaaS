@@ -1,0 +1,33 @@
+{
+    "name": "@opensaas/web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@opensaas/shared": "*",
+        "@opensaas/ui": "*",
+        "@tanstack/react-query": "^5.28.0",
+        "axios": "^1.6.8",
+        "lucide-react": "^0.378.0",
+        "next": "15.0.0-canary.160",
+        "react": "19.0.0-rc-0",
+        "react-dom": "19.0.0-rc-0",
+        "zod": "^3.23.0",
+        "zustand": "^4.5.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "autoprefixer": "^10.4.19",
+        "postcss": "^8.4.38",
+        "tailwindcss": "next",
+        "@tailwindcss/postcss": "next",
+        "typescript": "^5.4.5"
+    }
+}

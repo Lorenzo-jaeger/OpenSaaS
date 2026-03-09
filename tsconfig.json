@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@opensaas/shared/*": [
+                "packages/shared/src/*"
+            ],
+            "@opensaas/ui/*": [
+                "packages/ui/src/*"
+            ]
+        },
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "inlineSources": false,
+        "isolatedModules": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "preserveWatchOutput": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "target": "ESNext"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
