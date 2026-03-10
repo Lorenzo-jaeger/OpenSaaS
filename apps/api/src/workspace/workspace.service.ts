@@ -39,7 +39,7 @@ export class WorkspaceService {
             },
             include: {
                 _count: {
-                    select: { members: true, projects: true },
+                    select: { memberships: true, projects: true },
                 },
             },
         });

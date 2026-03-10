@@ -7,10 +7,13 @@ NC='\033[0m'
 
 echo -e "${BLUE}🚀 Iniciando OpenSaaS Services...${NC}"
 
-# Limpeza de portas (opcional mas útil)
-echo -e "${BLUE}🧹 Limpando portas 3000 e 3001...${NC}"
-fuser -k 3000/tcp 2>/dev/null
-fuser -k 3001/tcp 2>/dev/null
+# Limpeza de portas agressiva
+echo -e "${BLUE}🧹 Limpando processos antigos e portas 3000 e 3001...${NC}"
+pkill -f "next-dev" || true
+pkill -f "nest start" || true
+fuser -k 3000/tcp 2>/dev/null || true
+fuser -k 3001/tcp 2>/dev/null || true
+sleep 1
 
 # Subir Docker
 echo -e "${BLUE}🐳 Subindo Banco de Dados e Mailpit...${NC}"

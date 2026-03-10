@@ -16,8 +16,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-BR" className="dark">
-            <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-white`}>
+        <html lang="pt-BR" className="dark" suppressHydrationWarning>
+            <body className={`${inter.variable} ${outfit.variable} font-sans antialiased text-white`} suppressHydrationWarning>
                 <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.08),transparent_50%)] pointer-events-none" />
                 <main className="relative z-10">{children}</main>
             </body>

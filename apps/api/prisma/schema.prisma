@@ -31,6 +31,7 @@ model User {
   name          String?
   password      String
   memberships   Membership[]
+  sectorMemberships SectorMembership[]
   createdAt     DateTime     @default(now())
   updatedAt     DateTime     @updatedAt
 }
@@ -42,8 +43,31 @@ model Workspace {
   memberships Membership[]
   projects    Project[]
   tasks       Task[]
+  sectors     Sector[]
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
+}
+
+model Sector {
+  id          String       @id @default(cuid())
+  name        String
+  description String?
+  workspaceId String
+  workspace   Workspace    @relation(fields: [workspaceId], references: [id])
+  memberships SectorMembership[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model SectorMembership {
+  id       String @id @default(cuid())
+  userId   String
+  sectorId String
+  role     Role   @default(MEMBER)
+  user     User   @relation(fields: [userId], references: [id])
+  sector   Sector @relation(fields: [sectorId], references: [id])
+
+  @@unique([userId, sectorId])
 }
 
 model Membership {
